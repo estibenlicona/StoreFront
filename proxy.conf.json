@@ -1,0 +1,8 @@
+{
+	"/appstore/*":
+	{
+		"target": "https://localhost/",
+		"secure": false,
+		"logLeave": "debug"
+	}
+}

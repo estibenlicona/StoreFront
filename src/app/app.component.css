@@ -1,0 +1,29 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+nav > .container {
+    background: white;
+}
+
+footer {
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+
+#product-add-button {
+    position: fixed;
+    right: 20px;
+    bottom: 7%;
+}
+
+.container-fluid {
+    margin-top: 10px;
+}

@@ -1,0 +1,16 @@
+<div class="row" id="vitrine-products">
+	<div class="col-md-12">
+		<div class="d-flex align-content-start flex-wrap">
+			<div *ngFor="let product of products; let i = index" class="m-2">
+				<div class="card" style="width: 18rem;">
+					<img [src]="product.imageUrl" class="card-img-top" alt="...">
+					<div class="card-body">
+					  <h5 class="card-title">{{ product.name }}</h5>
+					  <a [routerLink]="['/product', product.id ]" class="btn btn-info mr-1">View</a>
+					  <button (click)="deleteProduct(product.id)" class="btn btn-danger">Delete</button>
+					</div>
+				  </div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+.card-title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+img.card-img-top {
+    width: 300px;
+    aspect-ratio: auto 300 / 252;
+    height: 252px;
+}
+
+.card {
+    overflow: hidden;
+}
+
+#vitrine-products {
+    padding-bottom: 100px;
+}

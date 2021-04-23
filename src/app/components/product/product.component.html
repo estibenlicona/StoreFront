@@ -1,0 +1,73 @@
+<div class="d-flex flex-row justify-content-center">
+    <div *ngIf="product.imageUrl" class="w-50 p-4">
+        <img [src]="product.imageUrl" class="w-100" alt="">
+    </div>
+    <div class="w-50 p-4">
+        <form (ngSubmit)="save(formProduct)" #formProduct="ngForm">
+            <div *ngIf="product.id" class="mb-3">
+              <label for="id" class="form-label">Id</label>
+              <input 
+                    [(ngModel)]="product.id" 
+                    name="id"
+                    disabled="disabled"
+                    type="text" class="form-control" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input 
+                    [(ngModel)]="product.name" 
+                    name="name" 
+                    required 
+                    placeholder="Product name"
+                    type="text" class="form-control" id="name" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="stock" class="form-label">Stock</label>
+              <input 
+                    [(ngModel)]="product.stock" 
+                    name="stock" 
+                    required
+                    placeholder="Quantity in stock"
+                    type="text" class="form-control" id="stock">
+            </div>
+            <div class="mb-3">
+                <label for="stock" class="form-label">Date</label>
+                <input
+                    [(ngModel)]="product.date" 
+                    name="date" 
+                    required
+                    placeholder="Product date"
+                    type="text" class="form-control" id="date">
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input 
+                    [(ngModel)]="product.price" 
+                    name="price" 
+                    required
+                    placeholder="Price of the product"
+                    type="text" class="form-control" id="price">
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Image URL</label>
+                <input 
+                    [(ngModel)]="product.imageUrl" 
+                    name="imageUrl" 
+                    required
+                    placeholder="Image of the product"
+                    type="text" class="form-control" id="price">
+            </div>
+            <div class="mb-3">
+                <div class="custom-control custom-checkbox">
+                    <input 
+                        [(ngModel)]="product.isActive" 
+                        name="isActive" 
+                        required
+                        type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Is the product active?</label>
+                  </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Save</button>
+        </form>
+    </div>
+</div>
